@@ -1,0 +1,27 @@
+{
+  "name": "404-last-request",
+  "version": "1.0.0",
+  "description": "A narrative puzzle game where players investigate and fix a broken web application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:server\"",
+    "dev:web": "cd apps/web && npm run dev",
+    "dev:server": "cd apps/server && npm run dev",
+    "build": "npm run build:shared && npm run build:web && npm run build:server",
+    "build:shared": "cd packages/shared && npm run build",
+    "build:web": "cd apps/web && npm run build",
+    "build:server": "cd apps/server && npm run build",
+    "install:all": "cd packages/shared && npm install && cd ../apps/web && npm install && cd ../server && npm install",
+    "test": "npm run build:shared && node apps/server/node_modules/tsx/dist/cli.mjs --test apps/server/prisma/evaluator.test.ts apps/server/prisma/scoring.test.ts apps/server/prisma/cases.test.ts",
+    "lint": "echo \"No linting yet\"",
+    "typecheck": "cd packages/shared && npm run typecheck && cd ../../apps/web && npm run typecheck && cd ../server && npm run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

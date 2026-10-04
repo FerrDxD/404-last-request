@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Case {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String   @unique
+  title       String
+  description String
+  difficulty  Int
+  order       Int
+  content     Json
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  sessions    Session[]
+}
+
+model Session {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+
+  caseId      String    @db.ObjectId
+  case        Case      @relation(fields: [caseId], references: [id])
+
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  attempts    Int       @default(0)
+  hintsUsed   Int       @default(0)
+  score       Int?
+
+  createdAt   DateTime  @default(now())
+}

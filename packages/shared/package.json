@@ -1,0 +1,17 @@
+{
+  "name": "@404-last-request/shared",
+  "version": "1.0.0",
+  "description": "Shared types for 404: LAST REQUEST",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
