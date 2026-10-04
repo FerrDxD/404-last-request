@@ -1,187 +1,312 @@
+<div align="center">
+
+```
+╔═══════════════════════════════════════════════════════════╗
+║  __ /  __ \  __/   __|  |   /\ \      / /  ____|  __ \  ║
+║ | |  | |  | |_    _|    |  /  \ \ /\ / /| |__   | |__) |║
+║   |  |    | __\  |      | / /\ \ V  V / |  __|  |  _  / ║
+║   |  | |  | |    |____  |/ /  \ \_  _/  | |____ | | \ \ ║
+║  _|  |_|  |_|   _______/_/ ___ \|__|  __|______||_|  \_\║
+║          |__/                                             ║
+╚═══════════════════════════════════════════════════════════╝
+```
+
 # 404: LAST REQUEST
 
-A narrative puzzle game where players investigate and fix a broken web application before its final deployment.
+**A narrative puzzle game where you debug a broken web app before its final deployment — or it's gone forever.**
 
-## Project Overview
+<br/>
 
-This is a browser-based debugging puzzle game built with:
-- **Frontend**: Vue.js, TypeScript, Vite, Vue Router, Pinia
-- **Backend**: Node.js, Express.js, TypeScript
-- **Database**: MongoDB with Prisma ORM
-- **Architecture**: Monorepo with separate frontend, backend, and shared-package dependencies
+[![License](https://img.shields.io/badge/license-Educational-blueviolet?style=flat-square)](./LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?style=flat-square&logo=node.js)](https://nodejs.org)
+[![Vue](https://img.shields.io/badge/Vue-3.x-42b883?style=flat-square&logo=vue.js)](https://vuejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?style=flat-square&logo=typescript)](https://typescriptlang.org)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47a248?style=flat-square&logo=mongodb)](https://mongodb.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4?style=flat-square)](./CONTRIBUTING.md)
 
-## Project Structure
+<br/>
+
+[**▶ Play Now**](#-getting-started) · [**📖 Docs**](./docs/) · [**🐛 Report Bug**](https://github.com/FerrDxD/last-request/issues) · [**💡 Request Feature**](https://github.com/FerrDxD/last-request/issues)
+
+</div>
+
+---
+
+## 🎮 What Is This?
+
+**404: LAST REQUEST** is a browser-based detective game for developers.
+
+You inherit a web application hours before its final deployment. It looks fine — until it isn't. Somewhere in the code, something is broken. You have the tools. You have the time. You have the skill.
+
+> *"I'm debugging a real application."*
+
+That's the feeling this game is built to give you.
+
+Each **Case** is a self-contained debugging challenge. You'll open the console, inspect network requests, read through source files, and apply patches — just like you would in real development. Except here, the stakes are narrative, the bugs are curated, and the satisfaction is guaranteed.
+
+<br/>
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🔍 **Simulated Dev Tools** | Console, Network tab, File explorer, DOM Inspector — all fake, all functional |
+| 🧩 **6 Escalating Cases** | From broken auth to race conditions to a full production launch |
+| 📖 **Narrative Layer** | Each bug tells a story. Read between the lines. |
+| 🏆 **Scoring System** | Hints cost points. Speed earns them. Find the solution efficiently. |
+| 🔄 **Data-Driven Cases** | Every case is a JSON-like definition — fully deterministic, fully testable |
+| 💾 **Progress Persistence** | Your progress is saved. Come back anytime. |
+
+<br/>
+
+## 🗺️ The Cases
 
 ```
-404-last-request/
+┌─────────────────────────────────────────────────────────┐
+│  CASE 01 · Broken Auth          ████░░░░░░  Rookie      │
+│  CASE 02 · The Missing Profile  ████████░░  Apprentice  │
+│  CASE 03 · Wrong Data           ██████████  Detective   │
+│  CASE 04 · The Dashboard Lies   ██████████  Detective   │
+│  CASE 05 · The Race Condition   ██████████  Senior Dev  │
+│  CASE 06 · Production Launch    ██████████  FINAL BOSS  │
+└─────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+## 🏗️ Architecture
+
+```
+last-request/
 ├── apps/
-│   ├── web/           # Vue.js frontend
-│   └── server/        # Express.js backend
+│   ├── web/            # Vue 3 + TypeScript + Vite (frontend)
+│   └── server/         # Express.js + TypeScript (backend API)
 ├── packages/
-│   └── shared/        # Shared TypeScript types
-├── docs/              # Project documentation
-├── package.json       # Root package with workspaces
-└── README.md
+│   └── shared/         # Shared types, interfaces, enums
+├── docs/               # PRD, Architecture, Agent guides
+├── design_reference/   # UI mockups & design assets
+└── package.json        # Monorepo root (npm workspaces)
 ```
 
-## Prerequisites
+### Tech Stack
 
-- Node.js >= 18.0.0
-- npm >= 9.0.0
-- MongoDB (local or MongoDB Atlas)
+<table>
+  <tr>
+    <th>Layer</th>
+    <th>Technology</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>Frontend</td>
+    <td>Vue 3, TypeScript, Vite</td>
+    <td>Game UI, case runtime, puzzle interaction</td>
+  </tr>
+  <tr>
+    <td>State</td>
+    <td>Pinia, Vue Router</td>
+    <td>Global state, navigation between cases</td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>Express.js, TypeScript</td>
+    <td>Case management, scoring, progress API</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>MongoDB + Prisma ORM</td>
+    <td>Case definitions, player progress, scores</td>
+  </tr>
+  <tr>
+    <td>Shared</td>
+    <td>TypeScript Package</td>
+    <td>Types and interfaces across frontend/backend</td>
+  </tr>
+</table>
 
-## Setup
+<br/>
 
-### 1. Install Dependencies
+## 🚀 Getting Started
+
+### Prerequisites
+
+| Requirement | Version |
+|---|---|
+| Node.js | `>= 18.0.0` |
+| npm | `>= 9.0.0` |
+| MongoDB | Atlas (cloud) or local instance |
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/FerrDxD/last-request.git
+cd last-request
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 npm run install:all
 ```
 
-The root install provides the monorepo scripts; `install:all` installs dependencies for the shared package, web app, and server.
+> `install:all` installs dependencies for all workspaces: `packages/shared`, `apps/web`, and `apps/server`.
 
-### 2. Configure Environment Variables
-
-Copy the example environment file:
+### 3. Configure Environment Variables
 
 ```bash
 cp apps/server/.env.example apps/server/.env
 ```
 
-Edit `apps/server/.env` and configure:
+Edit `apps/server/.env`:
 
 ```env
-DATABASE_URL="mongodb+srv://username:password@cluster.mongodb.net/404-last-request?retryWrites=true&w=majority"
+DATABASE_URL="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/404-last-request?retryWrites=true&w=majority"
 PORT=3000
 CLIENT_URL="http://localhost:5173"
 NODE_ENV="development"
 ```
 
-Replace the placeholders with the MongoDB **database user's** credentials and the host from your Atlas cluster. Keep `/404-last-request` (the database name) before the `?` query string. Do not include the angle brackets. If the password contains reserved URL characters such as `@`, `:`, `/`, `?`, or `#`, percent-encode those characters before putting it in the URL. Keep `.env` private; never commit or share its credentials.
+> **⚠️ Never commit `.env` to version control.** It is already listed in `.gitignore`.
 
-#### Get MongoDB Atlas credentials
+#### Getting MongoDB Atlas Credentials
 
-1. Sign in to [MongoDB Atlas](https://cloud.mongodb.com/) and create or select a project and cluster.
-2. In **Database Access**, add a database user and save its username and password. These are separate from your Atlas website login.
-3. In **Network Access**, add your current IP address. Avoid allowing access from every IP except for temporary, controlled testing.
-4. Open the cluster's **Connect** dialog, choose **Drivers**, select Node.js, and copy the connection string.
-5. Replace the username, password, and `<cluster-host>` in `apps/server/.env`; add `/404-last-request` before `?retryWrites=true&w=majority` if the copied URL has no database name.
+1. Sign in to [MongoDB Atlas](https://cloud.mongodb.com/) → create or select a project and cluster
+2. In **Database Access** → add a database user → save username & password *(separate from your Atlas login)*
+3. In **Network Access** → add your current IP address
+4. Open **Connect** → **Drivers** → select Node.js → copy the connection string
+5. Replace placeholders in your `.env` — add `/404-last-request` before `?retryWrites` if not present
 
-### 3. Setup Database
+> If your password contains `@`, `:`, `/`, `?`, or `#` — **percent-encode them** before putting in the URL.
 
-Generate Prisma client:
+### 4. Set Up the Database
 
 ```bash
+# From the server directory
 cd apps/server
+
+# Generate Prisma client
 npm run prisma:generate
-```
 
-Push schema to database:
-
-```bash
+# Push schema to database
 npm run prisma:push
-```
 
-Seed the database with initial cases:
-
-```bash
+# Seed initial case data
 npm run prisma:seed
 ```
 
-### 4. Build the Project
+### 5. Start Development
 
 ```bash
-npm run build
-```
-
-This builds the shared package, frontend, and backend in dependency order.
-
-## Development
-
-### Start Both Frontend and Backend
-
-```bash
+# From root — starts both frontend and backend concurrently
 npm run dev
 ```
 
-This starts:
-- Frontend at http://localhost:5173
-- Backend at http://localhost:3000
+| Service | URL |
+|---|---|
+| Frontend | http://localhost:5173 |
+| Backend API | http://localhost:3000 |
 
-### Start Frontend Only
+<br/>
 
-```bash
-npm run dev:web
-```
+## 🧰 Available Scripts
 
-### Start Backend Only
-
-```bash
-npm run dev:server
-```
-
-## Build
+Run these from the **root** of the repository:
 
 ```bash
-npm run build
+# Development
+npm run dev              # Start frontend + backend (concurrent)
+npm run dev:web          # Start frontend only
+npm run dev:server       # Start backend only
+
+# Build
+npm run build            # Build shared → web → server (in order)
+npm run build:shared     # Build shared package only
+npm run build:web        # Build Vue frontend only
+npm run build:server     # Build Express backend only
+
+# Quality
+npm run test             # Run test suite (no DB required)
+npm run typecheck        # Type-check all workspaces
+npm run lint             # Lint all workspaces
 ```
 
-This builds:
-- Shared package
-- Frontend (Vue)
-- Backend (TypeScript)
+<br/>
 
-## Testing
+## 🧪 Testing
 
 ```bash
 npm run test
 ```
 
-The test suite validates all six case definitions, case-evaluation outcomes, multi-patch behavior, and score calculations. It does not require a database connection.
+The test suite covers:
 
-## Linting
+- ✅ All 6 case definitions
+- ✅ Case evaluation outcomes
+- ✅ Multi-patch behavior
+- ✅ Score calculations
 
-```bash
-npm run lint
+> **No database connection required** for tests — cases are evaluated in-memory.
+
+<br/>
+
+## 🎯 Game Mechanics
+
+The game simulates a real developer workflow:
+
+```
+OBSERVE → INVESTIGATE → HYPOTHESIZE → TEST → VERIFY
 ```
 
-## Type Checking
+1. **Observe** — The broken application state is presented
+2. **Investigate** — Use simulated dev tools: Console, Network, Files, Inspector
+3. **Hypothesize** — Form a theory about the root cause
+4. **Test** — Apply a patch from the available options
+5. **Verify** — Run the test suite to confirm the fix
 
-```bash
-npm run typecheck
-```
+Each case has:
+- 📋 A clear **objective**
+- 🗂️ **Evidence** scattered across console logs, network tabs, and files
+- 💡 **3-level hint system** (hints cost score points)
+- ✅ **Deterministic solutions** — there is always one correct answer
 
-## Game Mechanics
+<br/>
 
-The game simulates a developer environment where players:
+## 🤝 Contributing
 
-1. **Observe** - See the broken application
-2. **Investigate** - Use simulated developer tools (Console, Network, Files, Inspector)
-3. **Hypothesize** - Form theories about what's wrong
-4. **Test** - Attempt fixes
-5. **Verify** - Run tests to confirm the solution
+We welcome contributions! Please read our **[Contributing Guide](./CONTRIBUTING.md)** before submitting a pull request.
 
-Each case represents a debugging challenge with increasing difficulty.
+Key principles:
+- 🎮 Gameplay first — every change should serve the player experience
+- 🧹 Keep it simple — no premature abstractions
+- 📊 Data-driven — new cases go in the case definitions, not hardcoded
+- ✅ Deterministic — solutions must be testable and verifiable
 
-## Case Structure
+<br/>
 
-Cases are data-driven and include:
-- Objective
-- Application state
-- Available tools
-- Evidence (console logs, network requests, files)
-- Solution requirements
-- Hints (3 levels)
+## 🛡️ Security
 
-## Contributing
+Found a vulnerability? Please read our **[Security Policy](./SECURITY.md)** for responsible disclosure guidelines.
 
-- Keep it simple
-- Gameplay first
-- No premature abstraction
-- Data-driven cases
-- Deterministic solutions
+<br/>
 
-## License
+## 📜 Code of Conduct
 
-This project is for educational purposes.
+This project adheres to a **[Code of Conduct](./CODE_OF_CONDUCT.md)**. By participating, you are expected to uphold it.
+
+<br/>
+
+## 📄 License
+
+This project is for **educational purposes**. See [LICENSE](./LICENSE) for details.
+
+<br/>
+
+---
+
+<div align="center">
+
+Made with ☕ and too many console.log statements.
+
+**[FerrDxD](https://github.com/FerrDxD)** · [maulanaferdi0678@gmail.com](mailto:maulanaferdi0678@gmail.com)
+
+</div>
