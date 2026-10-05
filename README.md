@@ -26,7 +26,7 @@
 
 <br/>
 
-[**▶ Play Now**](#-getting-started) · [**📖 Docs**](./docs/) · [**🐛 Report Bug**](https://github.com/FerrDxD/last-request/issues) · [**💡 Request Feature**](https://github.com/FerrDxD/last-request/issues)
+[**▶ Play Now**](#-getting-started) · [**📖 Docs**](./docs/) · [**🐛 Report Bug**](https://github.com/FerrDxD/404-last-request/issues) · [**💡 Request Feature**](https://github.com/FerrDxD/404-last-request/issues)
 
 </div>
 
@@ -77,7 +77,7 @@ Each **Case** is a self-contained debugging challenge. You'll open the console, 
 ## 🏗️ Architecture
 
 ```
-last-request/
+404-last-request/
 ├── apps/
 │   ├── web/            # Vue 3 + TypeScript + Vite (frontend)
 │   └── server/         # Express.js + TypeScript (backend API)
@@ -138,8 +138,8 @@ last-request/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/FerrDxD/last-request.git
-cd last-request
+git clone https://github.com/FerrDxD/404-last-request.git
+cd 404-last-request
 ```
 
 ### 2. Install Dependencies

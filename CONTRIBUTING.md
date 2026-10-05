@@ -51,7 +51,7 @@ By contributing, you agree to abide by our [Code of Conduct](./CODE_OF_CONDUCT.m
 Found a bug? We want to know.
 
 **Before submitting:**
-1. Check the [existing issues](https://github.com/FerrDxD/last-request/issues) to avoid duplicates
+1. Check the [existing issues](https://github.com/FerrDxD/404-last-request/issues) to avoid duplicates
 2. If you find a related closed issue, open a new one and reference the old one
 
 **When submitting, include:**
@@ -70,7 +70,7 @@ Found a bug? We want to know.
 Have an idea? Great.
 
 **Before submitting:**
-1. Check [open issues](https://github.com/FerrDxD/last-request/issues) and [discussions](https://github.com/FerrDxD/last-request/discussions) for similar ideas
+1. Check [open issues](https://github.com/FerrDxD/404-last-request/issues) and [discussions](https://github.com/FerrDxD/404-last-request/discussions) for similar ideas
 2. Make sure it aligns with the project's core goal: *a narrative debugging puzzle game*
 
 **When submitting a feature request, include:**
@@ -147,8 +147,8 @@ No issue is required for small documentation fixes — just open a PR.
 
 ```bash
 # 1. Fork and clone the repo
-git clone https://github.com/YOUR_USERNAME/last-request.git
-cd last-request
+git clone https://github.com/YOUR_USERNAME/404-last-request.git
+cd 404-last-request
 
 # 2. Install all dependencies
 npm install
@@ -177,7 +177,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-last-request/
+404-last-request/
 ├── apps/
 │   ├── web/                    # Vue 3 frontend
 │   │   ├── src/
@@ -454,8 +454,8 @@ Stuck on something? Here's how to get help:
 
 | Channel | Use for |
 |---------|---------|
-| [GitHub Issues](https://github.com/FerrDxD/last-request/issues) | Bug reports, feature requests |
-| [GitHub Discussions](https://github.com/FerrDxD/last-request/discussions) | General questions, ideas, feedback |
+| [GitHub Issues](https://github.com/FerrDxD/404-last-request/issues) | Bug reports, feature requests |
+| [GitHub Discussions](https://github.com/FerrDxD/404-last-request/discussions) | General questions, ideas, feedback |
 | [Email](mailto:maulanaferdi0678@gmail.com) | Private questions, security concerns |
 
 **When asking for help:**
